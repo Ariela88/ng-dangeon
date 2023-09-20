@@ -1,0 +1,33 @@
+import { Component, Input } from '@angular/core';
+import { Spell } from 'src/app/model/spell';
+import { StorageService } from 'src/app/service/storage.service';
+import { MatDialog } from '@angular/material/dialog';
+import { DetailsComponent } from '../details/details.component';
+
+@Component({
+  selector: 'app-card',
+  templateUrl: './card.component.html',
+  styleUrls: ['./card.component.scss']
+})
+export class CardComponent {
+
+
+  @Input() spellData?:Spell;
+  @Input() isFavourites:boolean = false
+  
+
+
+  constructor( public storage:StorageService,public dialog: MatDialog){}
+
+  openSpellDetailsDialog(spell: Spell) {
+    const dialogRef = this.dialog.open(DetailsComponent, {
+      width: '500px',
+      data: spell 
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('Dialog chiusa', result);
+    });
+  }
+
+}

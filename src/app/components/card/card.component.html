@@ -1,0 +1,13 @@
+<div class="card" *ngIf="spellData">
+<mat-card>
+        <mat-card-header>
+            <mat-card-title> {{spellData.name}}</mat-card-title>
+
+        </mat-card-header>
+        <mat-card-actions>
+            <button mat-button (click)="openSpellDetailsDialog(spellData)">Dettagli</button>
+            <button mat-button (click)="storage.toggleFavourites(spellData)">Aggiungi ai Preferiti</button>
+        </mat-card-actions>
+    </mat-card>
+
+</div>
