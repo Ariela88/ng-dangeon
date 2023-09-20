@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&family=MedievalSharp&display=swap');
+
+.title-header{
+    font-size: 60px;
+    font-family: 'Leckerli One', cursive;
+}
+
+.header{
+    display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+.header-toolbar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

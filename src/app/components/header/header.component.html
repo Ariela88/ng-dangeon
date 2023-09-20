@@ -1,0 +1,21 @@
+
+<p class="header-toolbar">
+    <mat-toolbar>
+      <mat-toolbar-row class="header">
+        <span class="title-header">Dungeon&Dragons</span>
+        <span class="example-spacer"></span>
+       
+      </mat-toolbar-row>
+  
+      <mat-toolbar-row>
+        <span>Spell Book</span>
+        <span class="example-spacer"></span>
+        <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" [routerLink]="['/favourites']" routerLinkActive="router-link-active" >
+            <mat-icon>favorite</mat-icon>
+          </button>
+          <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" [routerLink]="['/home']" routerLinkActive="router-link-active" >
+            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
+        </button>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  </p>

@@ -1,12 +1,12 @@
 <div class="card" *ngIf="spellData">
-<mat-card>
+<mat-card [ngClass]="{'favourite-card': spellData.isFavourite}">
         <mat-card-header>
             <mat-card-title> {{spellData.name}}</mat-card-title>
 
         </mat-card-header>
         <mat-card-actions>
             <button mat-button (click)="openSpellDetailsDialog(spellData)">Dettagli</button>
-            <button mat-button (click)="storage.toggleFavourites(spellData)">Aggiungi ai Preferiti</button>
+            <button mat-button (click)="storage.toggleFavourites(spellData)">{{spellData.isFavourite? 'rimuovi':'salva'}}</button>
         </mat-card-actions>
     </mat-card>
 

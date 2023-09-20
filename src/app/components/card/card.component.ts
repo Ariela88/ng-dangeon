@@ -21,7 +21,7 @@ export class CardComponent {
 
   openSpellDetailsDialog(spell: Spell) {
     const dialogRef = this.dialog.open(DetailsComponent, {
-      width: '500px',
+      
       data: spell 
     });
 
