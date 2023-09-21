@@ -9,21 +9,25 @@ import { HttpClient } from '@angular/common/http';
 export class ConnectionService {
 
   selectedSpell = ''
+  apiUrl = `https://www.dnd5eapi.co/api/spells/`
 
   constructor(private http: HttpClient) { }
 
   getSpells(): Observable<Spell[]> {
-    const apiUrl = 'https://www.dnd5eapi.co/api/spells';
-    return this.http.get(apiUrl).pipe(
-      map((response: any) => response.results), 
-      tap(spellArray => console.log(spellArray)) 
+
+    return this.http.get<any>(this.apiUrl).pipe(
+      map(response => response.results)
+
     );
   }
 
-  getSpellDetail(spellId: string): Observable<Spell> {
-    const apiUrl = `https://www.dnd5eapi.co/api/spells/${spellId}`;
-    return this.http.get<Spell>(apiUrl);
+  getSpellDetail() {
+
+    return this.http.get<Spell>(this.apiUrl + this.selectedSpell);
   }
 
+  getSpellDetailWithIndex(spellIndex:string){
+    return this.http.get<Spell>(this.apiUrl + spellIndex);
+  }
 
 }

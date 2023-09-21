@@ -1,6 +1,10 @@
 
-<h1 mat-dialog-title>Dettagli dell'elemento</h1>
-<div mat-dialog-content><p><strong>Nome:</strong> {{ spell.name }}</p></div>
-<div mat-dialog-actions>
-  <button mat-button mat-dialog-close>Close</button>
+<div *ngIf="spellDetail">
+<h1>{{spellDetail.name}}</h1>
+
+<div *ngIf="spellDetail.desc && spellDetail.desc.length > 0">
+<p>{{spellDetail.desc[0]}}</p>
+
+
+</div>
 </div>
