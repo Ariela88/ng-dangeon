@@ -1,6 +1,6 @@
 
 <p class="header-toolbar">
-    <mat-toolbar>
+    <mat-toolbar color='primary'>
       <mat-toolbar-row class="header">
         <span class="title-header">Dungeon&Dragons </span>
         <span class="example-spacer"></span>
@@ -15,5 +15,15 @@
             <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
         </button>
       </mat-toolbar-row>
+      <mat-slide-toggle (toggleChange)="changeTheme()"
+      class="example-margin"
+
+      [checked]="isLightTheme">
+
+
+
+{{isLightTheme? 'Dark' : 'Light'}}
+  </mat-slide-toggle>
+
     </mat-toolbar>
   </p>
