@@ -14,8 +14,8 @@ export class AppComponent {
   constructor(private router: Router) {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
-        // Controlla se l'utente è sulla home page
-        this.isHomePage = this.router.url === '/home'; // Sostituisci con l'URL effettivo della home page
+       
+        this.isHomePage = this.router.url === '/home';
       }
     });
   }
