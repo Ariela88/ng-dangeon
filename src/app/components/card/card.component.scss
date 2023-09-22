@@ -1,10 +1,32 @@
 .card{
 width: 300px;
+border-radius: 30px;
+
+
 
 
 }
 
+mat-card-title{
+  text-align: center!important;
+  font-family: 'MedievalSharp', cursive !important;
+  font-size: 32px;
+}
+
+
+mat-card-header{
+ justify-content: center !important;
+  font-family: 'MedievalSharp', cursive !important;
+}
+
+mat-card-actions{
+  justify-content: center !important;
+   font-family: 'MedievalSharp', cursive !important;
+ }
+
 .favourite-card {
-    background-color:rgb(254, 238, 129)
+
+    background-color:rgb(255, 72, 0);
+    color: black;
   }
 

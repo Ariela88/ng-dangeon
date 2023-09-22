@@ -3,7 +3,11 @@
     <mat-toolbar-row class="header">
       <span class="title-header">Dungeon&Dragons </span>
       <span class="example-spacer"></span>
-    <span class="example-spacer"></span>
+      <span class="example-spacer"></span>
+      <div class="btn-header-container">
+      <mat-slide-toggle (toggleChange)="changeTheme()" class="example-margin" [checked]="isLightTheme">
+        {{isLightTheme? 'Dark' : 'Light'}}
+      </mat-slide-toggle>
       <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon"
         [routerLink]="['/favourites']" routerLinkActive="router-link-active">
         <mat-icon>favorite</mat-icon>
@@ -11,14 +15,9 @@
       <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon"
         [routerLink]="['/home']" routerLinkActive="router-link-active">
         <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
-      </button>
+      </button> </div>
     </mat-toolbar-row>
-    <mat-slide-toggle (toggleChange)="changeTheme()" class="example-margin" [checked]="isLightTheme">
 
-
-
-      {{isLightTheme? 'Dark' : 'Light'}}
-    </mat-slide-toggle>
 
   </mat-toolbar>
 </p>

@@ -1,36 +1,46 @@
-// @import url('https://fonts.googleapis.com/css2?family=Leckerli+One&family=MedievalSharp&display=swap');
-
-// .title-header{
-
-//     font-family: 'Leckerli One', cursive;
-//     color: rgb(72, 41, 1);
-
-//     text-shadow: -1px 0 #804d14, 0 1px #804d14, 1px 0 #804d14, 0 -1px #804d14;
-//     font-size: 60px;
-//     padding-left: 100px;
-// }
-
-// .title-header:hover{
-//   color: antiquewhite;
-//   transition: 0.3s;
-// }
-
-// .header{
-//   display: flex;
-//   justify-content: space-around;
-//   height: 150px;
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Leckerli+One&family=MedievalSharp&display=swap');
 
 
+.title-header{
 
-// }
+    font-family: 'Great Vibes', cursive;
+    color: rgb(72, 41, 1);
 
-// .example-spacer{
-//   width: 60%;
-// }
+    text-shadow: -1px 0 #ffffff, 0 1px #ffffff, 1px 0 #ffffff, 0 -1px #ffffff;
+    font-size: 100px;
+    margin-top:50px;
+    margin-left: 25%;
+    letter-spacing: 8px;
+    
+}
 
-// .mat-toolbar-row{
-//   background-color: saddlebrown;
-//   background-image: url(/src/assets/dndmobile.jpg) !important;
-// background-position: center;
-// background-size: cover;
-// }
+.title-header:hover{
+  color: antiquewhite;
+  transition: 0.3s;
+}
+
+.header-toolbar{
+  display: flex;
+  justify-content: space-around;
+  height: 150px;
+  background-color: transparent;
+
+}
+
+.example-spacer{
+  width: 60%;
+}
+
+.mat-toolbar-row{
+ background-color: transparent;
+}
+
+.mat-toolbar{
+    background-color: transparent !important;
+}
+
+.btn-header-container{
+    background-color: #fbeb3961;
+    border-radius: 30px;
+    padding: 4px;
+}
