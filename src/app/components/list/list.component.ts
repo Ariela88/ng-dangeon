@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { Spell } from 'src/app/model/spell';
 import { ConnectionService } from 'src/app/service/connection.service';
 import { StorageService } from 'src/app/service/storage.service';
@@ -13,7 +13,9 @@ import { Router } from '@angular/router';
 })
 export class ListComponent {
 
-  spells: Spell[]=[]
+  spells: Spell[]=[];
+  showTopButton: boolean = true;
+  hasScrolled: boolean = false;
 
   constructor(private storage:StorageService, private connection:ConnectionService, public dialog: MatDialog, private route:Router){ }
 
@@ -25,6 +27,10 @@ export class ListComponent {
 
       }
     });
+
+  
+
+    
   }
 
   // openSpellDetailsDialog(spell: Spell) {
@@ -43,4 +49,35 @@ export class ListComponent {
 this.route.navigateByUrl('/detail/' + spell.index)
 
   }
+
+  scrollTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  @HostListener('window:scroll', [])
+onWindowScroll() {
+  this.checkScroll();
+}
+
+checkScroll() {
+  const scrollPosition = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
+
+  if (scrollPosition > 20) {
+    this.showTopButton = true;
+    if (!this.hasScrolled) {
+      this.hasScrolled = true;
     }
+  } else {
+    this.showTopButton = false;
+  }
+}
+
+  }
+  
+  
+
+
+
+
+
+    

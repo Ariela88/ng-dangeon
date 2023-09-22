@@ -15,6 +15,7 @@ import { HeaderComponent } from './components/header/header.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { MainComponent } from './components/main/main.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
     FavouritesComponent,
     CardComponent,
     HeaderComponent,
+    MainComponent,
 
 
   ],

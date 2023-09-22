@@ -3,4 +3,10 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
 
-background-color: rgb(254, 206, 150);}
+background-color: rgb(254, 206, 150);
+background-image: url(./assets/dndmobile.jpg);
+background-size: cover;
+background-position: center;
+background-attachment:fixed;
+
+}

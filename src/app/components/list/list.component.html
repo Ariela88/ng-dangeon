@@ -1,4 +1,5 @@
-
 <div class="card-row">
-    <app-card  *ngFor="let spell of spells" class="card-container" [spellData]="spell" (spellSelected)="openDetails($event)"></app-card>
-  </div>
+  <button id="top" class="scroll-to-top" (click)="scrollTop()" [style.display]="showTopButton && hasScrolled ? 'block' : 'none'">Top</button>
+
+  <app-card *ngFor="let spell of spells" class="card-container" [spellData]="spell" (spellSelected)="openDetails($event)"></app-card>
+</div>
