@@ -1,10 +1,65 @@
-
-<div *ngIf="spellDetail">
-<h1>{{spellDetail.name}}</h1>
-
-<div *ngIf="spellDetail.desc && spellDetail.desc.length > 0">
-<p>{{spellDetail.desc[0]}}</p>
-
-
-</div>
-</div>
+<div class="container">
+    <div *ngIf="spellDetail" class="card">
+      <h1>{{ spellDetail.name }}</h1>
+  
+      <div *ngIf="spellDetail.desc && spellDetail.desc.length > 0">
+        <h2>Descrizione</h2>
+        <p>{{ spellDetail.desc[0] }}</p>
+      </div>
+  
+      <div *ngIf="spellDetail.attack_type">
+        <h2>Tipo di Attacco</h2>
+        <p>{{ spellDetail.attack_type }}</p>
+      </div>
+  
+      <div *ngIf="spellDetail.classes && spellDetail.classes.length > 0">
+        <h2>Classi</h2>
+        <div *ngFor="let classItem of spellDetail.classes">
+          <p>{{ classItem.name }}</p>
+        </div>
+      </div>
+  
+      <div *ngIf="spellDetail.damage">
+        <h2>Danno</h2>
+        <p>Tipo: {{ spellDetail.damage.damage_type.name }}</p>
+        <p>Livello 2: {{ spellDetail.damage.damage_at_slot_level['2'] }}</p>
+       
+      </div>
+  
+      <div *ngIf="spellDetail.concentration">
+        <h2>Concentrazione</h2>
+        <p>{{ spellDetail.concentration ? 'Sì' : 'No' }}</p>
+      </div>
+  
+      <div *ngIf="spellDetail.duration">
+        <h2>Durata</h2>
+        <p>{{ spellDetail.duration }}</p>
+      </div>
+  
+      <div *ngIf="spellDetail.higher_level && spellDetail.higher_level.length > 0">
+        <h2>Livello Massimo</h2>
+        <div *ngFor="let level of spellDetail.higher_level">
+          <p>{{ level }}</p>
+        </div>
+      </div>
+  
+      <div *ngIf="spellDetail.material">
+        <h2>Materiale</h2>
+        <p>{{ spellDetail.material }}</p>
+      </div>
+  
+      <div *ngIf="spellDetail.components && spellDetail.components.length > 0">
+        <h2>Componenti</h2>
+        <p>{{ spellDetail.components.join(', ') }}</p>
+      </div>
+  
+      <div *ngIf="spellDetail.ritual">
+        <h2>Rituale</h2>
+        <p>{{ spellDetail.ritual ? 'Sì' : 'No' }}</p>
+      </div>
+      
+    
+  
+    </div>
+  </div>
+  
